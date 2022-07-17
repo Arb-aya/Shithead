@@ -98,14 +98,14 @@ provide("createToast", createToast);
 
 <style lang="scss">
 .toast-container {
-  width: 100%;
+  min-width: 100%;
   position: relative;
 
   .toast {
     position: absolute;
     background-color: $toast-background;
-    top: 0;
-    right: 0;
+    top: 1rem;
+    right: 1rem;
     z-index: 20;
 
     .toast-header {

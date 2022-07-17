@@ -3,9 +3,11 @@ import ToastContainer from "./components/ToastContainer.vue";
 </script>
 
 <template>
-  <ToastContainer>
-    <router-view></router-view>
-  </ToastContainer>
+  <main>
+    <ToastContainer>
+      <router-view></router-view>
+    </ToastContainer>
+  </main>
 </template>
 
 <style lang="scss">
@@ -15,18 +17,5 @@ import ToastContainer from "./components/ToastContainer.vue";
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 </style>
