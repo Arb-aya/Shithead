@@ -1,1 +1,9 @@
 $font-colour: #000000;
+$error: red;
+$success: green;
+$info: yellow;
+
+$toast-success: $success;
+$toast-error: $error;
+$toast-info: $info;
+$toast-background: #ffffff;

@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: "ShitheadRegister",
+  name: "ShitheadSignup",
 };
 </script>
 
@@ -8,14 +8,13 @@ export default {
 // import { ref } from "vue";
 // import { supabase } from "../../supabase";
 // const loading = ref(false);
-
-const handleRegister = async () => {};
+const handleSignup = async () => {};
 </script>
 
 <template>
   <div class="row">
     <div class="col-8 offset-2">
-      <form class="login-form">
+      <form class="signup-form">
         <!-- email -->
         <input
           type="email"
@@ -24,6 +23,7 @@ const handleRegister = async () => {};
           placeholder="email"
           aria-label="email"
           class="form-control"
+          required
         />
         <!-- ./email -->
 
@@ -35,6 +35,7 @@ const handleRegister = async () => {};
           placeholder="Password"
           aria-label="password"
           class="form-control"
+          required
         />
         <!-- ./PASSWORD -->
 
@@ -46,9 +47,14 @@ const handleRegister = async () => {};
           placeholder="Confirm Password"
           aria-label="Confirm Password"
           class="form-control"
+          required
         />
         <!-- ./PASSWORD -->
-        <button type="button" class="btn btn-dark" @click.prevent="handleLogin">
+        <button
+          type="button"
+          class="btn btn-dark"
+          @click.prevent="handleSignup"
+        >
           Sign up
         </button>
       </form>
@@ -57,19 +63,13 @@ const handleRegister = async () => {};
 </template>
 
 <style lang="scss">
-.login-form {
+.signup-form {
   padding: 2rem;
   border: 1px solid black;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  input {
-    &:first-of-type {
-      margin-bottom: 0.3rem;
-    }
-  }
 
   button {
     margin-top: 0.5rem;
